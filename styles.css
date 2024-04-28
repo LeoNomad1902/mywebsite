@@ -1,63 +1,63 @@
-/* Base settings */
+/* Importing a new font for a fresh look */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Resetting default margins and paddings */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+/* Main body styling */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
-    background-color: #f7f7f7;
-    color: #333;
+    background: linear-gradient(135deg, #6dd5ed, #2193b0); /* Smooth gradient background */
+    color: #333333;
     padding: 20px;
 }
 
-/* Header styles */
+/* Header styling */
 header {
-    background-color: #004d40;
-    color: #ffffff;
+    color: #fff;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.8); /* Semi-transparent black background */
 }
 
 header nav ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
 }
 
 header nav ul li {
     display: inline;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 header nav ul li a {
     color: #ffffff;
     text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 600;
-    transition: color 0.3s ease;
+    font-weight: 700;
+    transition: color 0.5s;
 }
 
 header nav ul li a:hover {
-    color: #e0f2f1;
+    color: #ffdd40; /* Bright hover effect */
 }
 
-/* Section styles */
+/* Section styling with animation */
 section {
-    background-color: #ffffff;
     padding: 40px;
     margin: 20px 0;
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: sectionEntry 1s ease-out;
 }
 
-/* Animations for sections */
-@keyframes fadeIn {
+@keyframes sectionEntry {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(-20px);
     }
     to {
         opacity: 1;
@@ -65,57 +65,48 @@ section {
     }
 }
 
-section {
-    animation: fadeIn 1s ease-out;
-}
-
-/* Contact form styling */
-form {
-    margin-top: 20px;
-}
-
+/* Forms and buttons with subtle animations */
 form input, form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 10px;
-    border: 2px solid #b2dfdb;
+    border: none;
     border-radius: 4px;
+    transition: background-color 0.3s ease-out;
+}
+
+form input:focus, form textarea:focus {
+    background-color: #cceeff; /* Light blue focus color */
 }
 
 form button {
     width: 100%;
-    padding: 10px;
-    background-color: #26a69a;
+    padding: 12px;
+    background-color: #2193b0; /* Matching the gradient theme */
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.5s;
 }
 
 form button:hover {
-    background-color: #00796b;
+    background-color: #6dd5ed; /* Lighter shade on hover */
 }
 
-/* Footer styles */
+/* Footer styling */
 footer {
     text-align: center;
     padding: 20px 0;
-    background-color: #004d40;
+    background: #333;
     color: #fff;
-    margin-top: 20px;
 }
 
-footer p {
-    font-size: 0.8em;
-}
-
-/* Responsive design for smaller devices */
+/* Responsive adjustments for smaller devices */
 @media (max-width: 768px) {
     header nav ul li {
         display: block;
         text-align: center;
-        margin: 10px 0;
     }
 
     section {
